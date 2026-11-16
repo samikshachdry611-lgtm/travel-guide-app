@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoyageAI — Intelligent Mobile Travel Guide</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="mobile-frame">
+    <!-- Top Header -->
+    <header>
+      <div class="app-branding">
+        <h1>VoyageAI ✈️</h1>
+        <p>Your Smart Travel Companion</p>
+      </div>
+      <div class="destination-badge">📍 Delhi, India</div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs">
+      <button class="tab-btn active" data-tab="explore">Explore</button>
+      <button class="tab-btn" data-tab="itinerary">Itinerary</button>
+      <button class="tab-btn" data-tab="packing">Packing</button>
+    </nav>
+
+    <!-- TAB 1: EXPLORE -->
+    <section id="explore-tab" class="tab-content active">
+      <div class="search-box">
+        <input type="text" id="city-search" placeholder="Search city (e.g., Tokyo, Paris, Goa)..." />
+        <button id="search-btn">Go</button>
+      </div>
+
+      <div class="hero-destination">
+        <img id="dest-img" src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80" alt="Destination" />
+        <div class="hero-overlay">
+          <h2 id="dest-name">New Delhi</h2>
+          <p id="dest-desc">The vibrant capital blending ancient history with bustling modern energy.</p>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <h3>Top Highlights</h3>
+      </div>
+      <div id="highlights-list" class="highlights-grid">
+        <div class="highlight-card">
+          <span>🏛️</span>
+          <div>
+            <strong>Red Fort</strong>
+            <small>Mughal Architecture • 1.2k reviews</small>
+          </div>
+        </div>
+        <div class="highlight-card">
+          <span>🍛</span>
+          <div>
+            <strong>Chandni Chowk Street Food</strong>
+            <small>Culinary Tour • Top Rated</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: ITINERARY -->
+    <section id="itinerary-tab" class="tab-content">
+      <div class="section-title">
+        <h3>Day-by-Day Plan</h3>
+        <button id="add-plan-btn" class="mini-btn">+ Add Activity</button>
+      </div>
+      <div id="itinerary-list" class="itinerary-list">
+        <div class="itinerary-item">
+          <div class="time">09:00 AM</div>
+          <div class="details">
+            <strong>Heritage Walk at Qutub Minar</strong>
+            <small>Explore the ancient victory tower and iron pillar.</small>
+          </div>
+        </div>
+        <div class="itinerary-item">
+          <div class="time">01:30 PM</div>
+          <div class="details">
+            <strong>Lunch at Connaught Place</strong>
+            <small>Try local fusion cafes and North Indian thalis.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: PACKING CHECKLIST -->
+    <section id="packing-tab" class="tab-content">
+      <div class="section-title">
+        <h3>Smart Packing Checklist</h3>
+      </div>
+      <form id="packing-form">
+        <input type="text" id="pack-input" placeholder="Add item (e.g., Power Bank, Passport)..." required />
+        <button type="submit" class="primary-btn">Add</button>
+      </form>
+      <ul id="packing-list" class="packing-list"></ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
